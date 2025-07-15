@@ -54,7 +54,7 @@ python securecrt_password_extractor.py
 
 ## 1. 工作原理
 
-[SecureCRT密码加密原理](doc/how-does-SecureCRT-encrypt-password.md)
+[SecureCRT密码加密原理](how-does-SecureCRT-encrypt-password.md)
 
 注意：SecureCRT 9.4+版本的内容有待更新
 
