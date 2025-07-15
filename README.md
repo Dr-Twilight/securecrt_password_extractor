@@ -5,13 +5,13 @@ SecureCRT密码提取工具是一个用于解密和提取SecureCRT会话文件�
 ## 项目结构
 ```
 SecureCRT-encrypt-password/
-├── README.md               # 项目说明文档
-├── requirements.txt        # 依赖包列表
-├── securecrt_cipher.py     # 核心加密解密算法实现
-├── securecrt_password_extractor.py  # 批量密码提取脚本
-├── securecrt_passwords.csv # 提取结果输出文件
-└── Sessions/               # SecureCRT会话文件目录
-    └── ...                 # 会话子目录和.ini文件
+├── README.md                   # 项目说明文档
+├── requirements.txt            # 依赖包列表
+├── securecrt_cipher.py         # 核心加密解密算法实现
+├── securecrt_password_extractor.py      # 批量密码提取脚本
+├── securecrt_passwords.csv     # 提取结果输出文件
+└── Sessions/                   # SecureCRT会话文件目录
+    └── ...                     # 会话子目录和.ini文件
 ```
 ## 功能特点
 - 支持SecureCRT V1和V2两种密码加密格式
@@ -40,7 +40,8 @@ pip install -r requirements.txt
 python securecrt_password_extractor.py
 ```
 3. 根据提示输入CRT配置密码（若无则直接回车）
-4. 提取完成后，结果将保存到 securecrt_passwords.csv 文件 CSV输出格式
+4. 提取完成后，结果将保存到 securecrt_passwords.csv 文件 CSV输出格式:
+   
   | 目录层级 | 文件名 | 用户名 | 明文密码 | 密码版本 |
   |----------|--------|--------|----------|----------|
   | root     | server1.ini | admin | password123 | V2 |
@@ -48,8 +49,8 @@ python securecrt_password_extractor.py
 
 
 ### 2. securecrt_cipher.py（密码加解密工具）
-# SecureCRT加密密码解密工具可 单独使用
-# 来源于大佬项目:https://github.com/HyperSine/how-does-navicat-encrypt-password
+## SecureCRT加密密码解密工具可 单独使用
+## 来源于大佬项目:https://github.com/HyperSine/how-does-navicat-encrypt-password
 
 ## 1. 工作原理
 
