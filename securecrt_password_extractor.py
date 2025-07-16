@@ -1,6 +1,7 @@
 import os
 import re
 import csv
+import sys
 from securecrt_cipher import SecureCRTCrypto, SecureCRTCryptoV2
 
 
@@ -106,12 +107,16 @@ def main():
     config_passphrase = input().strip()
     print("密码输入完成，开始处理会话文件...\n")
 
-    # 2. 配置Session目录路径
-    sessions_dir = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)),
-        'Sessions'
-    )
-    print(f"使用固定的Sessions目录: {sessions_dir}")
+    # 2. 配置Session目录路径 - 修改路径获取逻辑
+    if getattr(sys, 'frozen', False):
+        # 打包后的EXE模式
+        SESSIONS_DIR = os.path.dirname(sys.executable)
+    else:
+        # 脚本模式
+        SESSIONS_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    sessions_dir = os.path.join(SESSIONS_DIR, 'Sessions')
+    print(f"使用Sessions目录: {sessions_dir}")
 
     # 3. 验证目录是否存在
     if not os.path.isdir(sessions_dir):
