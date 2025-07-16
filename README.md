@@ -46,6 +46,7 @@ python securecrt_password_extractor.py
 ```
 3. 根据提示输入CRT配置密码（若无则直接回车）
 4. 提取完成后，结果将保存到 securecrt_passwords.csv 文件 CSV输出格式
+   
   | 目录层级 | 文件名 | 用户名 | 明文密码 | 密码版本 |
   |----------|--------|--------|----------|----------|
   | root     | server1.ini | admin | password123 | V2 |
